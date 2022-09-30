@@ -1,8 +1,8 @@
 function ItemListContainer({greeting}) {
     const greetingStyle ={"color": "#005978"};
-    
+
     return (
-        <h1>{greeting}</h1>
+        <h1 style={greetingStyle}>{greeting}</h1>
     )
 }
 
