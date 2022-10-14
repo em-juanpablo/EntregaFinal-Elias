@@ -12,8 +12,8 @@ const ItemCount = (props) => {
     };
 
     return (
-        <div>
-            <div>
+        <div className='container-counter'>
+            <div className='btn-counter'>
                 <button disabled={count === props.stock} onClick={sumar}>
                     +
                 </button>
@@ -22,7 +22,7 @@ const ItemCount = (props) => {
                     -
                 </button>
             </div>
-            <button>Agregar al proyecto</button>
+            <button className='btn-add-project'>Agregar al proyecto</button>
         </div>
     );
 };

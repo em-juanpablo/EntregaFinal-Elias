@@ -4,7 +4,7 @@ import CartWidget from './CartWidget'
 
 const NavBar = () => {
     return (
-        <nav>
+        <nav className='navbar'>
             <Link to="/">
                 <h1>gpIT</h1>
             </Link>

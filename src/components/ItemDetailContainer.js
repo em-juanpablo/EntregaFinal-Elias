@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
     console.log(elem);
 
     return (
-        <div>
+        <div className="item-container">
             <ItemDetail elem={elem} />
         </div>
     );

@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: 5px;
+  background-color: gray;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 20px;
+}
+
+.container-counter {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 5px;
+}
+
+.btn-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-add-project {
+  border-radius: 5px;
+}
+
+.item-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: gray;
+  justify-content: center;
+  align-content: center;
+}

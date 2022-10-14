@@ -33,7 +33,7 @@ const ItemListContainer = () => {
     console.log(elem);
 
     return (
-        <div>
+        <div className='item-container'>
             <ItemList elem={elem} />
         </div>
     );

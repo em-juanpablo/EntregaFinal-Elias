@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Item = ({elem}) => {
     return (
-        <div>
+        <div className='card'>
             <img src={elem.img} alt={elem.name}></img>
-            <div>
+            <div className='card-info'>
                 <h2>{elem.name}</h2>
                 <h3>{elem.shortname}</h3>
                 <h5>${elem.terminalsNo}.-</h5>
