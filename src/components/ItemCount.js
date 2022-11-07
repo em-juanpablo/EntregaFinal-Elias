@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
-const ItemCount = (props) => {
-    const [count, setCount] = useState(props.inicial);
+const ItemCount = ({stock, inicial = 1, prueba}) => {
+    const [count, setCount] = useState(inicial);
 
     const sumar = () => {
         count < props.stock && setCount(count + 1);
@@ -11,18 +11,26 @@ const ItemCount = (props) => {
         count > props.inicial && setCount(count - 1);
     };
 
+    const add = () => {
+        prueba(count);
+    };
+
+    useEffect(() => {
+        setCount(inicial);
+    }, [inicial]);
+
     return (
         <div className='container-counter'>
             <div className='btn-counter'>
-                <button disabled={count === props.stock} onClick={sumar}>
+                <button disabled={count === stock} onClick={sumar}>
                     +
                 </button>
                 <p>{count}</p>
-                <button disabled={count === props.inicial} onClick={restar}>
+                <button onClick={restar}>
                     -
                 </button>
             </div>
-            <button className='btn-add-project'>Agregar al proyecto</button>
+            <button onClick={add} className='btn-add-project'>Agregar al proyecto</button>
         </div>
     );
 };

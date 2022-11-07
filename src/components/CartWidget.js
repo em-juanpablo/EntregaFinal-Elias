@@ -1,9 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { CartContext } from '../context/CartContext';
+import { useContext } from 'react';
 
 const CartWidget = () => {
+    const {totalUnidades} = useContext(CartContext);
+
+    const total = totalUnidades();
+
     return (
-        <FontAwesomeIcon icon={faCartShopping} />
+        <div>
+            <FontAwesomeIcon icon={faCartShopping} />
+            <span>{total}</span>
+        </div>
     );
 };
 

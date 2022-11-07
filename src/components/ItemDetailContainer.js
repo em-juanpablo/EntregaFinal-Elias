@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import ItemDetail from "./ItemDetail";
-import { elements } from "../mock/elementsMock";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import {collection, doc, getDoc} from "firebase/firestore";
+import { database } from "../services/firebaseConfig";
 
 const ItemDetailContainer = () => {
     const [elem, setElem] = useState({});
@@ -10,25 +11,21 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const traerElement = () => {
-            return new Promise((res, rej) => {
-                const element = elements.find(
-                    (elem) => elem.id === Number(id)
-                );
+        const collectionElements = collection(database, "elements");
+        const reference = doc(collectionElements, id);
 
-                setTimeout (() => {
-                    res(element);
-                }, 2000);
-            });
-        };
-        traerElement()
+        getDoc(reference)
             .then((res) => {
-                setElem(res);
+                setElem({
+                    id: res.id,
+                    ...res.data(),
+                });
             })
             .catch((error) => {
                 console.log(error);
             });
-    },[id]);
+        
+    }, [id]);
 
     console.log(elem);
 

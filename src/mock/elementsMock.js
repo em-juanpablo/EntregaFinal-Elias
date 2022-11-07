@@ -8,7 +8,7 @@ export const elements = [
         price: 900,
         stock: 10,
         area: 'Playa',
-        // img:
+        img: 'img/elements/bocasX6.svg'
     },
     {
         id: 2,
