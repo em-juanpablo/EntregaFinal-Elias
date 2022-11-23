@@ -8,7 +8,7 @@ const Item = ({elem}) => {
             <div className='card-info'>
                 <h2>{elem.name}</h2>
                 <h3>{elem.shortName}</h3>
-                <h5>${elem.terminalsNo}.-</h5>
+                <h5>{elem.terminalsNo}</h5>
                 <h5>{elem.category}</h5>
                 <h4>${elem.price}.-</h4>
                 {elem.stock === 0 ? (
