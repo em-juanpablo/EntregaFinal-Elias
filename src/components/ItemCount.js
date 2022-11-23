@@ -4,11 +4,11 @@ const ItemCount = ({stock, inicial = 1, prueba}) => {
     const [count, setCount] = useState(inicial);
 
     const sumar = () => {
-        count < props.stock && setCount(count + 1);
+        count < stock && setCount(count + 1);
     };
 
     const restar = () => {
-        count > props.inicial && setCount(count - 1);
+        count > inicial && setCount(count - 1);
     };
 
     const add = () => {

@@ -10,10 +10,10 @@ const ItemDetail = ({elem}) => {
 
     const prueba = (numero) => {
         setUnidades(numero);
-        addToCart(item, numero);
+        addToCart(elem, numero);
     };
 
-    const quantity = elemQuantity(item.id);
+    const quantity = elemQuantity(elem.id);
 
     return (
         <div>

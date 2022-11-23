@@ -4,9 +4,9 @@ import { CartContext } from '../context/CartContext';
 import { useContext } from 'react';
 
 const CartWidget = () => {
-    const {totalUnidades} = useContext(CartContext);
+    const {totalElems} = useContext(CartContext);
 
-    const total = totalUnidades();
+    const total = totalElems();
 
     return (
         <div>
