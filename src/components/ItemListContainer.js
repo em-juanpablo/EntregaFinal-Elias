@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { PropagateLoader } from 'react-spinners/';
 import ItemList from "./ItemList";
 import {collection, getDocs, query, where} from "firebase/firestore";
 import {database} from "../services/firebaseConfig";
@@ -40,8 +41,13 @@ const ItemListContainer = () => {
 
     if (loading) {
         return (
-            <div>
-                <h3>Loading...</h3>
+            <div 
+                style={{
+                    diplayFlex: 'flex',
+                    justifyContent: 'center',
+                }}
+            >
+                <PropagateLoader/>
             </div>
         );
     }

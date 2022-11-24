@@ -8,7 +8,7 @@ const NavBar = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        const collectionCategories = collection(database,"category");
+        const collectionCategories = collection(database,"categories");
         getDocs(collectionCategories)
             .then((res) => {
                 const categories = res.docs.map((cat) => {

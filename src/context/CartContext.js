@@ -46,7 +46,12 @@ const Provider = ({children}) => {
     };
 
     const total = () => {
-        return 1000;
+        let totalPrice = 0;
+        const copyy = [...cart];
+        copyy.forEach((elem) => {
+            totalPrice = totalPrice + (elem.price * elem.cantidad);
+        })
+        return totalPrice;
     };
 
     const elemQuantity = (id) => {
